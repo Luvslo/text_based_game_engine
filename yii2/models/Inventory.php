@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @maintainer Aleksey Goncharenko <alexey.sentishev@gmail.com>
+ */
 namespace app\models;
 
 use Yii;
@@ -13,17 +15,11 @@ use Yii;
  */
 class Inventory extends ActiveRecord
 {
-    /**
-     * @inheritdoc
-     */
     public static function tableName()
     {
         return 'inventory';
     }
 
-    /**
-     * @inheritdoc
-     */
     public function rules()
     {
         return [
@@ -33,9 +29,6 @@ class Inventory extends ActiveRecord
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
     public function attributeLabels()
     {
         return [

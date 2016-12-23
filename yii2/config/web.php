@@ -51,6 +51,10 @@ $config = [
                     'route' => 'game/intro',
                 ],
                 [
+                    'pattern' => 'game/welcome',
+                    'route' => 'game/welcome',
+                ],
+                [
                     'class' => yii\rest\UrlRule::class,
                     'controller' => ['user', 'question', 'answer', 'active-equipment'],
                     'pluralize' => false,

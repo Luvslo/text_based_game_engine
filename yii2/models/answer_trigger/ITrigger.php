@@ -1,4 +1,8 @@
 <?php
+/**
+ * @maintainer Aleksey Goncharenko <alexey.sentishev@gmail.com>
+ */
+
 namespace app\models\answer_trigger;
 
 use app\models\User;

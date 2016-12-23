@@ -1,4 +1,7 @@
 <?php
+/**
+ * @maintainer Aleksey Goncharenko <alexey.sentishev@gmail.com>
+ */
 namespace app\models;
 
 interface IFight {

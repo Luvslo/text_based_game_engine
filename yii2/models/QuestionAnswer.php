@@ -1,4 +1,7 @@
 <?php
+/**
+ * @maintainer Aleksey Goncharenko <alexey.sentishev@gmail.com>
+ */
 
 namespace app\models;
 
@@ -13,17 +16,11 @@ use Yii;
  */
 class QuestionAnswer extends ActiveRecord
 {
-    /**
-     * @inheritdoc
-     */
     public static function tableName()
     {
         return 'question_answer';
     }
 
-    /**
-     * @inheritdoc
-     */
     public function rules()
     {
         return [
@@ -32,9 +29,6 @@ class QuestionAnswer extends ActiveRecord
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
     public function attributeLabels()
     {
         return [

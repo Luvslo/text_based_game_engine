@@ -1,4 +1,8 @@
 <?php
+/**
+ * @maintainer Aleksey Goncharenko <alexey.sentishev@gmail.com>
+ */
+
 namespace app\models;
 use Yii;
 use yii\base\Model;
@@ -11,9 +15,7 @@ class Login extends Model
     public $password;
     public $rememberMe = true;
     private $_user;
-    /**
-     * @inheritdoc
-     */
+
     public function rules()
     {
         return [

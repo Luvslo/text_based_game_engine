@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @maintainer Aleksey Goncharenko <alexey.sentishev@gmail.com>
+ */
 namespace app\models;
 
 use Yii;
@@ -15,9 +17,6 @@ use Yii;
  */
 class Fight extends ActiveRecord implements IFight
 {
-    /**
-     * @inheritdoc
-     */
     public static function tableName()
     {
         return 'fight';

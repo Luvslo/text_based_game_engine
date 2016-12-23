@@ -1,4 +1,7 @@
 <?php
+/**
+ * @maintainer Aleksey Goncharenko <alexey.sentishev@gmail.com>
+ */
 
 namespace app\models;
 
@@ -31,9 +34,6 @@ class ActiveEquipment extends ActiveRecord
         return 'active_equipment';
     }
 
-    /**
-     * @inheritdoc
-     */
     public function rules()
     {
         return [
@@ -43,9 +43,6 @@ class ActiveEquipment extends ActiveRecord
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
     public function attributeLabels()
     {
         return [

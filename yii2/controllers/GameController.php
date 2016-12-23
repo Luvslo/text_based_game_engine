@@ -1,4 +1,7 @@
 <?php
+/**
+ * @maintainer Aleksey Goncharenko <alexey.sentishev@gmail.com>
+ */
 
 namespace app\controllers;
 
@@ -40,6 +43,14 @@ class GameController extends AbstractController
         return [
             'intro' => $this->renderPartial('intro'),
             'url' => Url::to(['question/view', 'id' => $question_id]),
+        ];
+    }
+
+    public function actionWelcome()
+    {
+        return [
+            'Welcome to demo server!',
+            'Read the API manual before Game: https://github.com/whiolf/text_based_game_engine'
         ];
     }
 }

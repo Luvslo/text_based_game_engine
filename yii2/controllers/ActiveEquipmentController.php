@@ -1,8 +1,7 @@
 <?php
 /**
- * @maintainer Aleksey Goncharenko <aleksey.goncharenko@corp.badoo.com>
+ * @maintainer Aleksey Goncharenko <alexey.sentishev@gmail.com>
  */
-
 
 namespace app\controllers;
 use app\models\exception\AbstractException;

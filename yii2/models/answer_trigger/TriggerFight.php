@@ -1,4 +1,7 @@
 <?php
+/**
+ * @maintainer Aleksey Goncharenko <alexey.sentishev@gmail.com>
+ */
 
 namespace app\models\answer_trigger;
 
@@ -11,7 +14,7 @@ use app\models\exception\SaveException;
 use app\models\http;
 
 /**
- * This is the model class for table "trigger_fight".
+ * Trigger which init fight.
  *
  * @property integer $id
  * @property integer $character_id
@@ -19,17 +22,11 @@ use app\models\http;
  */
 class TriggerFight extends AbstractTrigger implements ITrigger
 {
-    /**
-     * @inheritdoc
-     */
     public static function tableName()
     {
         return 'trigger_fight';
     }
 
-    /**
-     * @inheritdoc
-     */
     public function rules()
     {
         return [
@@ -39,9 +36,6 @@ class TriggerFight extends AbstractTrigger implements ITrigger
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
     public function attributeLabels()
     {
         return [

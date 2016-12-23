@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @maintainer Aleksey Goncharenko <alexey.sentishev@gmail.com>
+ */
 namespace app\models;
 
 use Yii;
@@ -16,17 +18,11 @@ use Yii;
  */
 class EnemyDamageType extends ActiveRecord
 {
-    /**
-     * @inheritdoc
-     */
     public static function tableName()
     {
         return 'enemy_damage_type';
     }
 
-    /**
-     * @inheritdoc
-     */
     public function rules()
     {
         return [
@@ -36,9 +32,6 @@ class EnemyDamageType extends ActiveRecord
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
     public function attributeLabels()
     {
         return [
@@ -110,5 +103,4 @@ class EnemyDamageType extends ActiveRecord
     {
         return $this->kick_type_id = $kick_type_id;
     }
-
 }
