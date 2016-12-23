@@ -21,7 +21,7 @@ You can try API on the demo server: http://78.47.191.23/game/welcome
 * [Installation](#installation)
 * [How to make own quests. Typical scenarios](#own_quest)
 
-REST API
+API
 -------------
 <a name="create_new_player"/>
 ### Create new player
