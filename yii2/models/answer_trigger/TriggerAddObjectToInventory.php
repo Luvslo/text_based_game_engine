@@ -49,7 +49,7 @@ class TriggerAddObjectToInventory extends AbstractTrigger
             $this->setResult($TriggerResult);
             return true;
         }
-        throw new SaveException(['This object already belongs to User']);
+        throw new SaveException($Inventory->getErrors());
     }
 
 

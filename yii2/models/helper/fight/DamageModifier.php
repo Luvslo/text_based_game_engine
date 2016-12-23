@@ -12,11 +12,13 @@ class DamageModifier
 {
     public static function modifyUserDamage(User $User, int $damage)
     {
+        $damage += $User->getDamage();
+
         $ActiveEquipment = ActiveEquipment::get($User->getId());
         $Weapon = $ActiveEquipment->getWeapon();
-        $Weapon->getDamage();
-        $damage += $User->getDamage() + $Weapon->getDamage();
-
+        if ($Weapon) {
+            $damage += $Weapon->getDamage();
+        }
         return $damage;
     }
 }
