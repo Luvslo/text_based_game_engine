@@ -20,6 +20,7 @@ class ActiveEquipmentController extends AbstractController
         $behaviors = parent::behaviors();
         $behaviors['authenticator'] = [
             'class' => \yii\filters\auth\HttpBearerAuth::className(),
+            'only' => ['view'],
         ];
         $behaviors['verbs'] = [
             'class' => \yii\filters\VerbFilter::className(),
@@ -35,6 +36,16 @@ class ActiveEquipmentController extends AbstractController
     public function actionView()
     {
         $user_id = Yii::$app->getRequest()->getQueryParam('id');
+
+        if ($this->getUser()->getId() != $user_id) {
+            Yii::$app->response->setStatusCode(http\Codes::HTTP_UNAUTHORIZED);
+            return [
+                'errors' => [
+                    'unauthorized',
+                ],
+            ];
+        }
+
         $ActiveEquipment = ActiveEquipment::get($user_id);
 
         if (!$ActiveEquipment) {
