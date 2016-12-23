@@ -106,10 +106,10 @@ class Answer extends ActiveRecord
     /**
      * @return Fight
      */
-    public function getFight()
+    public function getFight($user_id)
     {
         if (!$this->Fight) {
-            $this->Fight = Fight::findOne(['answer_id' => $this->getId()]);
+            $this->Fight = Fight::findOne(['answer_id' => $this->getId(), 'user_id' => $user_id]);
         }
         return $this->Fight;
     }

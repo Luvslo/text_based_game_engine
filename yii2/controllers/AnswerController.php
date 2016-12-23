@@ -77,14 +77,9 @@ class AnswerController extends AbstractController
         try {
             $TriggerResult = $Answer->processTrigger($User);
 
-            $Fight = $Answer->getFight();
-            $FightResult = new \stdClass();
+            $Fight = $Answer->getFight($User->getId());
             if (!$Fight) {
                 $User->moveToNextQuestion($answer_id);
-            } else {
-                $FightResult->id = $Fight->getId();
-                $FightResult->Character = $Fight->getCharacter();
-                $FightResult->url = Url::to(['fight/view', 'id' => $Fight->getId(), 'answer_id' => $answer_id]);
             }
             
             $Transaction->commit();
